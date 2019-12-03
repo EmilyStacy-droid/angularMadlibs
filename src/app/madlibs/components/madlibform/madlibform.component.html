@@ -1,1 +1,55 @@
-<p>madlibform works!</p>
+
+         <div class="container text-center mt-4"> 
+                <h2>It is a story about UNO...</h2>
+           <div class="m-2 p-2">
+                <label for="firstAdj" class="p-2">Please type in an <b>adjective</b></label>
+                <input type="text" [(ngModel)]="firstAdj" />
+
+            </div>
+
+            <div class="m-2 p-2">
+                    <label class="p-2" for="firstVerb">Please type in <b>a verb ending with -ing</b></label>
+                    <input type="text" [(ngModel)]="firstVerb" />
+    
+                </div>
+
+                <div class="m-2 p-2">
+                        <label class="p-2" for="secondAdj">Please type in <b>another adjective</b></label>
+                        <input type="text" [(ngModel)]="secondAdj" />
+        
+                    </div>
+
+                    <div class="m-2 p-2">
+                            <label class="p-2" for="firstAdv">Please type in <b>an adverb</b></label>
+                            <input type="text" [(ngModel)]="firstAdv" />
+            
+                        </div>
+
+                        <div class="m-2 p-2">
+                                <label class="p-2" for="secondVerb">Please type in <b>a verb without tenses</b></label>
+                                <input type="text" [(ngModel)]="secondVerb" />
+                
+                            </div>
+                        <div class = "m-2 p-2">
+                            <button class="btn btn-primary p-2 m-2" (click) = "isCompleted =!isCompleted">SUBMIT</button>
+                            <button class="btn btn-secondary p-2 m-2" (click) = "reset()">RESET</button>
+                        </div>
+        <div class="m-2 p-2" *ngIf="isCompleted"> 
+            
+            You felt <b>{{firstAdj}}</b> while checking the baby Yoda meme on a Saturday morning.
+            
+            While you took a break from the memes, <b>{{firstVerb}} </b> and thinking about the importance of memes in your life,you got an email from Tim.
+
+            In the email Tim said you did a/an <b>{{secondAdj}} </b> job on your UNO project and he wanted to talk to you on Monday.
+
+            On Monday, you walked <b>{{firstAdv}} </b> into Tim’s office. It turned out Tim just wanted to give you a birthday surprise and invited you to play a UNO game.
+
+            After the UNO project you had a complicated feeling about the UNO game, so you could not help but <b>{{secondVerb}} </b> the UNO cards in front of him.
+
+
+
+
+        
+        </div>
+    
+</div> 

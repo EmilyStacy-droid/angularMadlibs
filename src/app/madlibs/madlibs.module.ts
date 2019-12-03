@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
 import { MadlibsRoutingModule } from './madlibs-routing.module';
 
@@ -8,7 +9,8 @@ import { MadlibsRoutingModule } from './madlibs-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    MadlibsRoutingModule
+    MadlibsRoutingModule,
+    FormsModule
   ]
 })
 export class MadlibsModule { }
