@@ -1,41 +1,46 @@
 <div class="container no-gutter">
     <div class="row">
-        <div class="col-4 px-2 mt-2">
+        <form [formGroup] = "madlibForm" class="col-4 px-2 mt-2">
 
             <div class=" p-2">
                 <label for="firstAdj" class="p-2">Please type in an <b>adjective</b></label>
-                <input type="text" [(ngModel)]="firstAdj" />
+                <input type="text"
+                formControlName="firstAdj" />
 
             </div>
 
             <div class="p-2">
                 <label class="p-2" for="firstVerb">Please type in <b>a verb ending with -ing</b></label>
-                <input type="text" [(ngModel)]="firstVerb" />
+                <input type="text" [(ngModel)]="firstVerb" 
+                formControlName="firstVerb"/>
 
             </div>
 
             <div class="p-2">
                 <label class="p-2" for="secondAdj">Please type in <b>another adjective</b></label>
-                <input type="text" [(ngModel)]="secondAdj" />
+                <input type="text" [(ngModel)]="secondAdj" 
+                formControlName="secondAdj" />
 
             </div>
 
             <div class="p-2">
                 <label class="p-2" for="firstAdv">Please type in <b>an adverb</b></label>
-                <input type="text" [(ngModel)]="firstAdv" />
+                <input type="text" [(ngModel)]="firstAdv" 
+                formControlName="firstAdv"/>
 
             </div>
 
             <div class="p-2">
                 <label class="p-2" for="secondVerb">Please type in <b>a verb without tenses</b></label>
-                <input type="text" [(ngModel)]="secondVerb" />
+                <input type="text" [(ngModel)]="secondVerb"
+                formControlName="secondVerb"/>
 
             </div>
             <div class="p-2">
-                <button class="btn btn-primary p-2 m-2" (click)="isCompleted =!isCompleted">SUBMIT</button>
+                <button class="btn btn-primary p-2 m-2" (click)="save()">SUBMIT</button>
                 <button class="btn btn-secondary p-2 m-2" (click)="reset()">RESET</button>
             </div>
-        </div>
+        </form>
         <div class="col-2 qg mt-2"></div>
         <div class="col-6 px-2">
             <h2 *ngIf="!isCompleted" id="h2madlib">Creating your own story...</h2>
